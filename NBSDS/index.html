@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NBS-DS | Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo-area"><div class="logo-box">LOGO</div><span class="nbs-text">NBS-DS</span></div>
+        <div class="nav-links">
+            <a href="index.html">HOME</a>
+            <a href="library.html">LIBRARY</a>
+            <a href="login.html">TOP UP</a>
+            <a href="login.html">ORDER</a>
+            <a href="login.html">LOGIN/SIGNUP</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h1>YOUR NEXT ADVENTURE STARTS HERE.</h1>
+        <p>Your Home for Digital E-books and Physical Classics.</p>
+        <button class="btn-browse" onclick="location.href='library.html'">Browse Library</button>
+    </header>
+
+    <div class="announcement-container">
+        <div class="scrolling-text">📢 FLASH SALE: 20% OFF ALL E-BOOKS TODAY — FREE SHIPPING ON ORDERS OVER P1000 — NEW ARRIVALS IN CLASSICS SECTION</div>
+    </div>
+
+    <section class="section-container">
+        <div class="section-header">
+            <div class="title-group"><h2>Most Popular</h2></div>
+            <div class="tabs">
+                <button class="active" onclick="updatePopular(this)">DAILY</button>
+                <button onclick="updatePopular(this)">WEEKLY</button>
+                <button onclick="updatePopular(this)">MONTHLY</button>
+            </div>
+        </div>
+        <div class="home-row">
+            <div class="book-grid-4" id="popular-grid"></div>
+            <a href="library.html" class="more-bar">MORE</a>
+        </div>
+    </section>
+
+    <section class="section-container">
+        <div class="section-header"><div class="title-group"><h2>Latest Release</h2></div></div>
+        <div class="home-row">
+            <div class="book-grid-4" id="latest-grid"></div>
+            <a href="library.html" class="more-bar">MORE</a>
+        </div>
+    </section>
+
+    <section class="section-container" style="border-left: 10px solid black; margin: 60px 5%;">
+        <h2>ABOUT US</h2>
+        <p style="font-size: 24px; line-height: 1.6;">National Book Store Digital Shelf serves the modern reader with instant access to the world's best books.</p>
+        <h2 style="margin-top:40px;">CONTACT US</h2>
+        <p style="font-size: 24px;">Contact us at nbsds@gmail.com.ph</p>
+    </section>
+
+    <footer>© 2026 National Book Store Digital Shelf</footer>
+    <script src="script.js"></script>
+</body>
+</html>
