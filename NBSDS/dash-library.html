@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="user-style.css">
+    <title>NBS-DS | Library</title>
+</head>
+<body>
+    <nav>
+        <div class="logo-area">
+            <img src="logo.png" alt="LOGO">
+            <span>NBS-DS</span>
+        </div>
+        <div class="nav-links">
+            <a href="dash-library.html">LIBRARY</a>
+            <a href="dash-topup.html">TOP UP</a>
+            <a href="dash-order.html">ORDER</a>
+            <a href="dash-profile.html">PROFILE</a>
+        </div>
+    </nav>
+
+    <div style="padding: 0 5%;">
+        <div class="title-group">
+            <div class="library-header">
+                <div class="red-bar"></div>
+                LIBRARY
+            </div>
+            <div id="coinCount" class="coin-display">C:999</div>
+        </div>
+
+        <div class="library-filters">
+            <input type="text" id="search" placeholder="SEARCH..." onkeyup="filterLibrary()">
+            <select class="dark-select" id="genreSelect" onchange="filterLibrary()">
+                <option value="ALL GENRE">ALL GENRE</option>
+                <option value="Classic">CLASSIC</option>
+                <option value="Fiction">FICTION</option>
+                <option value="Romance">ROMANCE</option>
+                <option value="Drama">DRAMA</option>
+            </select>
+            <select class="dark-select" id="ownedFilter" onchange="filterLibrary()">
+                <option value="ALL">ALL STATUS</option>
+                <option value="OWNED">OWNED</option>
+                <option value="NOT OWNED">NOT OWNED</option>
+            </select>
+            <select class="dark-select" id="priceSort" onchange="filterLibrary()">
+                <option value="DEFAULT">PRICE: DEFAULT</option>
+                <option value="MOST EXPENSIVE">MOST EXPENSIVE</option>
+                <option value="LEAST EXPENSIVE">LEAST EXPENSIVE</option>
+            </select>
+            <select class="dark-select" id="dateSort" onchange="filterLibrary()">
+                <option value="DEFAULT">DATE: DEFAULT</option>
+                <option value="LATEST">LATEST</option>
+                <option value="OLDEST">OLDEST</option>
+            </select>
+        </div>
+
+        <div id="library-grid" class="book-grid-5"></div>
+    </div>
+
+    <footer>© 2026 National Book Store Digital Shelf</footer>
+    <script src="user-script.js"></script>
+</body>
+</html>

@@ -1,0 +1,373 @@
+:root {
+  --nbs-red: #f1251b;
+  --nbs-black: #000000;
+  --nbs-white: #ffffff;
+  --nbs-gray-light: #eeeeee;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--nbs-white);
+  color: var(--nbs-black);
+  overflow-x: hidden;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5%;
+  border: 1px solid var(--nbs-black);
+  height: 100px;
+  box-sizing: border-box;
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  height: 100%;
+}
+
+.logo-img {
+  height: 75px;
+  width: auto;
+  display: block;
+}
+
+.nbs-text {
+  font-size: 22px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--nbs-black);
+  margin-left: 35px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  border-bottom: 1px solid var(--nbs-black);
+}
+
+.hero h1 {
+  font-size: 60px;
+  margin: 0;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.hero p {
+  margin: 25px 0;
+  font-size: 20px;
+}
+
+.btn-browse {
+  background: var(--nbs-red);
+  color: var(--nbs-white);
+  border: none;
+  padding: 18px 70px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.announcement-container {
+  border: 1px solid var(--nbs-black);
+  margin: 40px 5%;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 18px 0;
+}
+
+.scrolling-text {
+  display: inline-block;
+  animation: scroll-left 30s linear infinite;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.section-container {
+  padding: 50px 5% 80px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.title-group {
+  border-left: 15px solid var(--nbs-red);
+  padding-left: 20px;
+  margin-bottom: 40px;
+}
+
+.title-group h2 {
+  margin: 0;
+  font-size: 36px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.tabs button {
+  background: var(--nbs-white);
+  border: 1px solid var(--nbs-black);
+  padding: 8px 25px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-left: 15px;
+  font-size: 14px;
+}
+
+.tabs button.active {
+  background: var(--nbs-black);
+  color: var(--nbs-white);
+}
+
+.library-filters {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 50px;
+  align-items: stretch;
+  width: 100%;
+}
+
+#search {
+  flex-grow: 1;
+  border: 1px solid var(--nbs-black);
+  padding: 0 20px;
+  font-size: 16px;
+  outline: none;
+  height: 55px;
+}
+
+.dark-select {
+  background: var(--nbs-black);
+  color: var(--nbs-white);
+  border: none;
+  padding: 0 20px;
+  font-size: 13px;
+  cursor: pointer;
+  min-width: 180px;
+  height: 55px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.home-row {
+  display: flex;
+  border: 1px solid var(--nbs-black);
+  align-items: stretch;
+}
+
+.book-grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  flex-grow: 1;
+  padding: 30px;
+}
+
+.book-grid-5 {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 25px;
+  width: 100%;
+}
+
+.more-bar {
+  background: var(--nbs-red);
+  color: var(--nbs-white);
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 25px;
+  font-weight: bold;
+  font-size: 28px;
+  text-decoration: none;
+  border-left: 1px solid var(--nbs-black);
+}
+
+.book-card {
+  border: 1px solid var(--nbs-black);
+  padding: 20px;
+  text-align: center;
+  background: var(--nbs-white);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.img-box {
+  background: var(--nbs-gray-light);
+  border: 1px solid var(--nbs-black);
+  width: 100%;
+  height: 220px;
+  margin-bottom: 15px;
+  flex-shrink: 0;
+}
+
+.b-genre {
+  font-size: 11px;
+  color: #666;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  text-align: left;
+  font-weight: bold;
+}
+
+.b-name {
+  font-weight: bold;
+  font-size: 16px;
+  height: 40px;
+  overflow: hidden;
+  text-align: left;
+  line-height: 1.2;
+  margin-bottom: 15px;
+}
+
+.b-price {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: left;
+  margin-top: auto;
+}
+
+.info-box {
+  border-left: 20px solid var(--nbs-black);
+  padding-left: 40px;
+  margin: 80px 5%;
+}
+
+.info-box h2 {
+  font-size: 36px;
+  margin: 0 0 15px 0;
+  text-transform: uppercase;
+}
+
+.info-box p {
+  font-size: 21px;
+  max-width: 1000px;
+  line-height: 1.5;
+}
+
+.login-header {
+  text-align: right;
+  padding: 25px 5%;
+}
+
+.back-btn {
+  text-decoration: none;
+  color: var(--nbs-black);
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.login-card {
+  border: 2px solid var(--nbs-black);
+  width: 100%;
+  max-width: 500px;
+  padding: 50px;
+  text-align: center;
+  margin: 60px auto;
+}
+
+.login-card label {
+  display: block;
+  text-align: left;
+  font-weight: bold;
+  margin: 20px 0 8px;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+.login-card input {
+  width: 100%;
+  border: 1px solid var(--nbs-black);
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.signin-btn {
+  background: var(--nbs-white);
+  border: 2px solid var(--nbs-black);
+  padding: 15px;
+  margin-top: 35px;
+  cursor: pointer;
+  font-weight: bold;
+  width: 100%;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+}
+
+.modal-content {
+  background: var(--nbs-white);
+  margin: 5% auto;
+  padding: 40px;
+  border: 2px solid var(--nbs-black);
+  width: 90%;
+  max-width: 550px;
+  text-align: center;
+}
+
+.modal-text {
+  height: 220px;
+  overflow-y: scroll;
+  border: 1px solid var(--nbs-black);
+  padding: 20px;
+  text-align: left;
+  font-size: 14px;
+  line-height: 1.7;
+  margin: 25px 0;
+  background: var(--nbs-white);
+}
+
+footer {
+  background: var(--nbs-black);
+  color: var(--nbs-white);
+  text-align: center;
+  padding: 60px 0;
+  margin-top: 80px;
+  font-weight: bold;
+  font-size: 18px;
+  letter-spacing: 1px;
+}

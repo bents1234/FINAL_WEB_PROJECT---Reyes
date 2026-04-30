@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="user-style.css">
+    <title>NBS-DS | Order</title>
+</head>
+<body>
+    <nav>
+        <div class="logo-area"><span>NBS-DS</span></div>
+        <div class="nav-links">
+            <a href="dash-library.html">LIBRARY</a>
+            <a href="dash-topup.html">TOP UP</a>
+            <a href="dash-order.html">ORDER</a>
+            <a href="dash-profile.html">PROFILE</a>
+        </div>
+    </nav>
+    <div style="padding: 0 5%;">
+        <div class="library-header"><div class="red-bar"></div>ORDER</div>
+        <div class="order-box">
+            <div class="order-row">
+                📍 Delivery Address<br>
+                <span style="font-weight:normal;">Juan Dela Cruz (+63) 912 345 6789<br>123 Bookworm Lane, Quezon City, Metro Manila</span>
+            </div>
+            <div id="order-item-row" class="order-row" style="display:flex; justify-content:space-between; align-items:center;"></div>
+            <div class="order-row" style="display:flex; justify-content:space-between;">
+                <span>SHIPPING FEE</span><span>P50</span>
+            </div>
+            <div class="order-row" style="display:flex; justify-content:space-between;">
+                <span>PAYMENT METHOD</span><span>Cash on Delivery (COD)</span>
+            </div>
+        </div>
+
+        <div class="total-section">
+            <div style="font-size:28px; font-weight:900;">Total Payment: <span id="total-payment">P0.00</span></div>
+            <button class="btn-white" onclick="processPlaceOrder()" style="padding:15px 40px; width:auto; font-size:18px;">PLACE ORDER</button>
+        </div>
+
+        <div style="display: flex; justify-content: flex-end; margin-top: 15px;">
+            <button class="btn-white" onclick="location.href='dash-order-details.html'" style="padding: 10px 30px; width: auto; font-size: 14px;">ORDER DETAILS</button>
+        </div>
+    </div>
+    <footer>© 2026 National Book Store Digital Shelf</footer>
+    <script src="user-script.js"></script>
+</body>
+</html>

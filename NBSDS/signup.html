@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NBS-DS | Signup</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="login-header">
+        <a href="index.html" class="back-btn">◁ BACK TO HOME</a>
+    </div>
+
+    <div class="login-card">
+        <img src="logo.png" alt="Logo" style="height: 100px; margin-bottom: 25px;">
+        <h1 style="text-transform: uppercase; letter-spacing: 3px; font-weight: 900;">Signup to NBS-DS</h1>
+        
+        <label>Email Address</label>
+        <input type="text">
+        
+        <label>Password</label>
+        <input type="password">
+
+        <label>Confirm Password</label>
+        <input type="password">
+        
+        <button class="signin-btn" onclick="showTerms()">Sign up</button>
+    </div>
+
+    <div id="termsModal" class="modal">
+        <div class="modal-content">
+            <h2 style="text-transform: uppercase; margin: 0; font-size: 28px; font-weight: 900;">Sign up</h2>
+            <p style="font-weight: bold; margin: 5px 0 10px; text-transform: uppercase; color: #555;">Terms and Agreement</p>
+            
+            <div class="modal-text">
+                <p><strong>1. PROPRIETARY RIGHTS</strong><br>All digital content, including e-books and previews, are the exclusive property of National Book Store. Distribution, reproduction, or modification of these files is strictly prohibited under the Intellectual Property Code of the Philippines.</p>
+                <p><strong>2. USER OBLIGATIONS</strong><br>By creating an account, you agree to provide accurate identification and contact information. You are solely responsible for all activities occurring under your secure login credentials.</p>
+                <p><strong>3. DATA PRIVACY COMPLIANCE</strong><br>Your personal information is processed in accordance with the Data Privacy Act of 2012. We employ industry-standard encryption to protect your transaction history and payment details.</p>
+                <p><strong>4. SERVICE LIMITATIONS</strong><br>NBS-DS reserves the right to modify availability, pricing, or access to the digital shelf at any time to comply with publisher agreements or technical requirements.</p>
+            </div>
+
+            <div style="margin-bottom: 25px; display: flex; align-items: center; justify-content: center; gap: 10px;">
+                <input type="checkbox" id="agreeCheck" style="width: 18px; height: 18px; cursor: pointer;">
+                <label for="agreeCheck" style="margin:0; font-weight: bold; font-size: 14px; cursor: pointer;">I AGREE TO THE TERMS AND CONDITIONS</label>
+            </div>
+
+            <div style="display: flex; gap: 20px; justify-content: center;">
+                <button onclick="hideTerms()" style="padding: 12px 40px; border: 2px solid #000; background: #fff; cursor: pointer; font-weight: bold; text-transform: uppercase;">Decline</button>
+                <button onclick="checkAndComplete()" style="padding: 12px 40px; border: 2px solid #000; background: #000; color: #fff; cursor: pointer; font-weight: bold; text-transform: uppercase;">Sign up</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>© 2026 National Book Store Digital Shelf</footer>
+    <script src="script.js"></script>
+    <script>
+        function checkAndComplete() {
+            if(document.getElementById('agreeCheck').checked) {
+                window.location.href = "login.html";
+            } else {
+                alert("Please agree to the terms and conditions to proceed.");
+            }
+        }
+    </script>
+</body>
+</html>

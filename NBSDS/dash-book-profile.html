@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="user-style.css">
+    <title>NBS-DS | Book Info</title>
+</head>
+<body>
+    <nav>
+        <div class="logo-area">
+            <img src="logo.png" alt="LOGO">
+            <span>NBS-DS</span>
+        </div>
+        <div class="nav-links">
+            <a href="dash-library.html">LIBRARY</a>
+        </div>
+    </nav>
+
+    <div style="padding: 40px 5%;">
+        <button class="btn-white" onclick="location.href='dash-library.html'" style="width: auto; padding: 10px 30px; margin-bottom: 20px;">← RETURN TO LIBRARY</button>
+        
+        <div style="display: grid; grid-template-columns: 350px 1fr; gap: 50px;">
+            <div class="img-box" style="cursor: default; height: 500px;"></div>
+            <div>
+                <h1 id="bTitle" style="font-size: 40px; margin:0; text-transform: uppercase;">BOOK NAME</h1>
+                <p id="bMeta" style="color: #ff0000; font-weight: 900; font-size: 20px;"></p>
+                <hr style="border: 1px solid #000; margin: 20px 0;">
+                
+                <div style="display: flex; gap: 15px;">
+                    <button class="btn-yellow" id="ordBtn">ORDER PHYSICAL COPY</button>
+                    <button class="btn-white" id="buyBtn">BUY EBOOK</button>
+                </div>
+
+                <div id="chapterArea" style="display:none; margin-top: 40px;">
+                    <h3 style="border-bottom: 4px solid #ff0000; padding-bottom: 10px; text-transform: uppercase;">10 Available Chapters</h3>
+                    <div id="chapterList" style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 20px;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="user-script.js"></script>
+    <script>
+        const id = parseInt(new URLSearchParams(window.location.search).get('id'));
+        const book = books.find(b => b.id === id);
+        if(book) {
+            document.getElementById('bTitle').innerText = book.name;
+            document.getElementById('bMeta').innerText = `${book.genre} | Published: ${book.date}`;
+            document.getElementById('ordBtn').onclick = () => orderPhysical(book.id);
+            
+            const owned = getOwned();
+            if(owned.includes(book.id)) {
+                document.getElementById('buyBtn').style.display = 'none';
+                document.getElementById('chapterArea').style.display = 'block';
+                const list = document.getElementById('chapterList');
+                for(let i=1; i<=10; i++) {
+                    list.innerHTML += `<button class="btn-white" onclick="location.href='dash-reader.html?id=${id}'">CHAPTER ${i} — READ</button>`;
+                }
+            } else {
+                document.getElementById('buyBtn').onclick = () => buyBook(book.id, book.price);
+            }
+        }
+    </script>
+</body>
+</html>
