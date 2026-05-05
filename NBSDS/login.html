@@ -23,8 +23,23 @@
         <button class="signin-btn" onclick="checkLogin()">Sign in</button>
         
         <p style="margin-top: 25px; font-size: 14px;">Don't have an account? 
-            <a href="signup.html" style="color: blue; text-decoration: none; font-weight: bold;">Sign up</a>
+            <a href="signup.html" style="color: #d32f2f; text-decoration: none; font-weight: bold;">Sign up</a>
         </p>
+
+        <hr style="border: 1px solid #eee; margin: 20px 0;">
+
+        <div style="text-align: left; font-size: 12px; background: #f9f9f9; padding: 15px; border: 1px dashed #000;">
+            <p style="font-weight: 900; margin-top: 0; text-transform: uppercase; color: #d32f2f;">Demo Accounts:</p>
+            <ul style="padding-left: 15px; margin-bottom: 10px;">
+                <li><strong>Admin:</strong> admin@gmail.com | admin1234</li>
+                <li><strong>S-Admin:</strong> sadmin@gmail.com | sadmin1234</li>
+                <li><strong>User:</strong> juan@gmail.com | juan1234</li>
+            </ul>
+            
+            <p style="font-style: italic; color: #555; line-height: 1.4;">
+                <strong>Note:</strong> If you use a new device, you <u>must</u> click <strong>Sign Up</strong> first to save the local storage to that device before you can log in.
+            </p>
+        </div>
     </div>
 
     <footer>© 2026 National Book Store Digital Shelf</footer>
@@ -44,7 +59,7 @@
                 window.location.href = "dash-library.html";
             } 
             else {
-                alert("Access Denied: Please use the correct credentials.");
+                alert("Account not found. Please sign up to create your account!");
             }
         }
     </script>
