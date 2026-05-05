@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="user-style.css">
+    <link rel="stylesheet" href="admin-style.css">
+    <title>NBS-DS | Super Admin Dashboard</title>
+</head>
+<body>
+
+    <nav>
+        <div class="logo-area">
+            <img src="logo.png" alt="Logo" style="height: 40px; margin-right: 10px;">
+            <span>NBS-DS</span>
+        </div>
+        <div class="admin-title">SUPER ADMIN DASHBOARD</div>
+        <button class="btn-remove" onclick="location.href='index.html'" style="width: auto; padding: 5px 20px; font-size: 14px;">LOGOUT</button>
+    </nav>
+
+    <div class="admin-section">
+        <div class="section-header">
+            <div class="library-header"><div class="red-bar"></div>ACCOUNT MANAGEMENT</div>
+            <button class="add-btn">+ Create Admin Account</button>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Password</th>
+                    <th style="width: 100px;">Remove</th>
+                </tr>
+            </thead>
+            <tbody id="admin-account-list">
+                <tr>
+                    <td>Admin Juan</td>
+                    <td>juan@nbs.com</td>
+                    <td>juan1234</td>
+                    <td><button class="btn-remove" onclick="removeBook('Admin Juan')">Remove</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="admin-section">
+        <div class="library-header"><div class="red-bar"></div>STATISTICS</div>
+        
+        <h3 class="sub-header" style="font-weight: 900; text-transform: uppercase; margin-top: 20px;">Sales/Revenue</h3>
+        <div class="stats-container">
+            <div class="stat-card">
+                <div class="stat-label">Daily Sales</div>
+                <div class="stat-value">₱42,500</div>
+                <div class="stat-growth" style="color: #2e7d32;">▲ 12% vs yesterday</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Weekly Sales</div>
+                <div class="stat-value">₱285,000</div>
+                <div class="stat-growth" style="color: #2e7d32;">▲ 5% vs last week</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Monthly Sales</div>
+                <div class="stat-value">₱1,120,400</div>
+                <div class="stat-growth" style="color: #2e7d32;">▲ 8% vs last month</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Yearly Sales</div>
+                <div class="stat-value">₱14,560,800</div>
+                <div class="stat-growth" style="color: #2e7d32;">▲ 15% vs last year</div>
+            </div>
+        </div>
+
+        <h3 class="sub-header" style="font-weight: 900; text-transform: uppercase; margin-top: 30px;">User Growth</h3>
+        <div class="stats-container">
+            <div class="stat-card">
+                <div class="stat-label">Daily Users</div>
+                <div class="stat-value">142</div>
+                <div class="stat-growth" style="color: #2e7d32;">▲ 22 new signups</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Weekly Users</div>
+                <div class="stat-value">980</div>
+                <div class="stat-growth" style="color: #2e7d32;">▲ 158 new signups</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Monthly Users</div>
+                <div class="stat-value">12,450</div>
+                <div class="stat-growth" style="color: #2e7d32;">▲ 1,142 new signups</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Yearly Users</div>
+                <div class="stat-value">154,200</div>
+                <div class="stat-growth" style="color: #2e7d32;">▲ 13,562 new signups</div>
+            </div>
+        </div>
+    </div>
+
+    <footer>© 2026 National Book Store Digital Shelf</footer>
+
+    <script src="admin-script.js"></script>
+</body>
+</html>

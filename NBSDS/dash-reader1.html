@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="user-style.css">
+    <title>NBS-DS | Chapter 1</title>
+</head>
+<body>
+    <nav>
+        <div class="logo-area">
+            <img src="logo.png" alt="LOGO">
+            <span id="navBookName">BOOK NAME</span>
+        </div>
+        <button class="btn-white" onclick="goToProfile()" style="width: auto; padding: 10px 30px;">RETURN TO CONTENTS</button>
+    </nav>
+
+    <div style="border: 2px solid #000; margin: 40px 5%; padding: 60px; background-color: #fff; min-height: 600px; display: flex; flex-direction: column; align-items: center;">
+        <h1 style="font-size: 45px; text-transform: uppercase; margin-bottom: 20px;">CHAPTER 1</h1>
+        
+        <div style="font-family: Arial, sans-serif; font-size: 16px; line-height: 1.6; text-align: justify; margin-top: 40px; margin-bottom: 60px; width: 100%; max-width: 900px; text-transform: none;">
+            On the last of October Don Santiago de los Santos, popularly known as Capitan Tiago, gave a dinner.  In spite of the fact that, contrary to his usual custom, he had made the announcement only that afternoon, it was already the sole topic of conversation in Binondo and adjacent districts, and even in the Walled City, for at that time Capitan Tiago was considered one of the most hospitable of men, and it was well known that his house, like his country, shut its doors against nothing except commerce and all new or bold ideas.  Like an electric shock the announcement ran through the world of parasites, bores, and hangers-on, whom God in His infinite bounty creates and so kindly multiplies in Manila.  Some looked at once for shoe-polish, others for buttons and cravats, but all were especially concerned about how to greet the master of the house in the most familiar tone, in order to create an atmosphere of ancient friendship or, if occasion should arise, to excuse a late arrival.
+
+            This dinner was given in a house on Calle Anloague, and although we do not remember the number we will describe it in such a way that it may still be recognized, provided the earthquakes have not destroyed it.  We do not believe that its owner has had it torn down, for such labors are generally entrusted to God or nature—which Powers hold the contracts also for many of the projects of our government.  It is a rather large building, in the style of many in the country, and fronts upon the arm of the Pasig which is known to some as the Binondo River, and which, like all the streams in Manila, plays the varied rôles of bath, sewer, laundry, fishery, means of transportation and communication, and even drinking water if the Chinese water-carrier finds it convenient.  It is worthy of note that in the distance of nearly a mile this important artery of the district, where traffic is most dense and movement most deafening, can boast of only one wooden bridge, which is out of repair on one side for six months and impassable on the other for the rest of the year, so that during the hot season the ponies take advantage of this permanent status quo to jump off the bridge into the water, to the great surprise of the abstracted mortal who may be dozing inside the carriage or philosophizing upon the progress of the age.
+
+            The house of which we are speaking is somewhat low and not exactly correct in all its lines: whether the architect who built it was afflicted with poor eyesight or whether the earthquakes and typhoons have twisted it out of shape, no one can say with certainty.  A wide staircase with green newels and carpeted steps leads from the tiled entrance up to the main floor between rows of flower-pots set upon pedestals of motley-colored and fantastically decorated Chinese porcelain.  Since there are neither porters nor servants who demand invitation cards, we will go in, O you who read this, whether friend or foe, if you are attracted by the strains of the orchestra, the lights, or the suggestive rattling of dishes, knives, and forks, and if you wish to see what such a gathering is like in the distant Pearl of the Orient.  Gladly, and for my own comfort, I should spare you this description of the house, were it not of great importance, since we mortals in general are very much like tortoises: we are esteemed and classified according to our shells; in this and still other respects the mortals of the Philippines in particular also resemble tortoises.
+        </div>
+
+        <div style="display: flex; justify-content: center; gap: 30px; width: 100%; margin-top: auto;">
+            <button class="btn-white" style="width: 250px; opacity: 0.5; cursor: not-allowed;" disabled>Previous Chapter</button>
+            <button class="btn-white" style="width: 250px;" onclick="goToProfile()">Table of Contents</button>
+            <button class="btn-white" style="width: 250px;" onclick="location.href='dash-reader2.html?id='+id+'&ch=2'">Next Chapter</button>
+        </div>
+    </div>
+
+    <footer>© 2026 National Book Store Digital Shelf</footer>
+
+    <script src="user-script.js"></script>
+    <script>
+        const id = new URLSearchParams(window.location.search).get('id');
+        const book = books.find(b => b.id == id);
+        if(book) document.getElementById('navBookName').innerText = book.name;
+        function goToProfile() { location.href = `dash-book-profile.html?id=${id}`; }
+    </script>
+</body>
+</html>

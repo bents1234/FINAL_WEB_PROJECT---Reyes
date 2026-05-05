@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="user-style.css">
+    <title>NBS-DS | Chapter 2</title>
+</head>
+<body>
+    <nav>
+        <div class="logo-area">
+            <img src="logo.png" alt="LOGO">
+            <span id="navBookName">BOOK NAME</span>
+        </div>
+        <button class="btn-white" onclick="goToProfile()" style="width: auto; padding: 10px 30px;">RETURN TO CONTENTS</button>
+    </nav>
+
+    <div style="border: 2px solid #000; margin: 40px 5%; padding: 60px; background-color: #fff; min-height: 600px; display: flex; flex-direction: column; align-items: center;">
+        <h1 style="font-size: 45px; text-transform: uppercase; margin-bottom: 20px;">CHAPTER 2</h1>
+        
+        <div style="font-family: Arial, sans-serif; font-size: 16px; line-height: 1.6; text-align: justify; margin-top: 40px; margin-bottom: 60px; width: 100%; max-width: 900px; text-transform: none;">
+           If we go up the stairs, we immediately find ourselves in a spacious hallway, called there, for some unknown reason, the caida, which tonight serves as the dining-room and at the same time affords a place for the orchestra   In the center a large table profusely and expensively decorated seems to beckon to the hanger-on with sweet promises, while it threatens the bashful maiden, the simple dalaga, with two mortal hours in the company of strangers whose language and conversation usually have a very restricted and special character.
+
+           Contrasted with these terrestrial preparations are the motley paintings on the walls representing religious matters, such as Purgatory, Hell, The Last Judgment, The Death of the Just, and The Death of the Sinner.
+
+           At the back of the room, fastened in a splendid and elegant framework, in the Renaissance style, possibly by Arévalo, is a glass case in which are seen the figures of two old women.  The inscription on this reads: Our Lady of Peace and Prosperous Voyages, who is worshiped in Antipolo, visiting in the disguise of a beggar the holy and renowned Capitana Inez during her sickness.[1]  While the work reveals little taste or art, yet it possesses in compensation an extreme realism, for to judge from the yellow and bluish tints of her face the sick woman seems to be already a decaying corpse, and the glasses and other objects, accompaniments of long illness, are so minutely reproduced that even their contents may be distinguished.  In looking at these pictures, which excite the appetite and inspire gay bucolic ideas, one may perhaps be led to think that the malicious host is well acquainted with the characters of the majority of those who are to sit at his table and that, in order to conceal his own way of thinking, he has hung from the ceiling costly Chinese lanterns; bird-cages without birds; red, green, and blue globes of frosted glass; faded air-plants; and dried and inflated fishes, which they call botetes.  The view is closed on the side of the river by curious wooden arches, half Chinese and half European, affording glimpses of a terrace with arbors and bowers faintly lighted by paper lanterns of many colors.
+ 
+           In the sala, among massive mirrors and gleaming chandeliers, the guests are assembled.  Here, on a raised platform, stands a grand piano of great price, which tonight has the additional virtue of not being played upon.  Here, hanging on the wall, is an oil-painting of a handsome man in full dress, rigid, erect, straight as the tasseled cane he holds in his stiff, ring-covered fingers—the whole seeming to say, Ahem! See how well dressed and how dignified I am!  The furnishings of the room are elegant and perhaps uncomfortable and unhealthful, since the master of the house would consider not so much the comfort and health of his guests as his own ostentation, A terrible thing is dysentery, he would say to them, but you are sitting in European chairs and that is something you don’t find every day.
+
+           This room is almost filled with people, the men being separated from the women as in synagogues and Catholic churches.  The women consist of a number of Filipino and Spanish maidens, who, when they open their mouths to yawn, instantly cover them with their fans and who murmur only a few words to each other, any conversation ventured upon dying out in monosyllables like the sounds heard in a house at night, sounds made by the rats and lizards.  Is it perhaps the different likenesses of Our Lady hanging on the walls that force them to silence and a religious demeanor or is it that the women here are an exception?
+        </div>
+
+        <div style="display: flex; justify-content: center; gap: 30px; width: 100%; margin-top: auto;">
+            <button class="btn-white" style="width: 250px;" onclick="location.href='dash-reader1.html?id='+id+'&ch=1'">Previous Chapter</button>
+            <button class="btn-white" style="width: 250px;" onclick="goToProfile()">Table of Contents</button>
+            <button class="btn-white" style="width: 250px;" onclick="location.href='dash-reader.html?id='+id+'&ch=3'">Next Chapter</button>
+        </div>
+    </div>
+
+    <footer>© 2026 National Book Store Digital Shelf</footer>
+
+    <script src="user-script.js"></script>
+    <script>
+        const id = new URLSearchParams(window.location.search).get('id');
+        const book = books.find(b => b.id == id);
+        if(book) document.getElementById('navBookName').innerText = book.name;
+        function goToProfile() { location.href = `dash-book-profile.html?id=${id}`; }
+    </script>
+</body>
+</html>

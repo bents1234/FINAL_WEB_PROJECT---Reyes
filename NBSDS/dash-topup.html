@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="user-style.css">
+    <title>NBS-DS | Top Up</title>
+</head>
+<body>
+    <nav>
+        <div class="logo-area">
+            <img src="logo.png" alt="Logo">
+            <span>NBS-DS</span>
+        </div>
+        <div class="nav-links">
+            <a href="dash-library.html">LIBRARY</a>
+            <a href="dash-topup.html">TOP UP</a>
+            <a href="dash-order.html">ORDER</a>
+            <a href="dash-profile.html">PROFILE</a>
+        </div>
+    </nav>
+
+    <div style="padding: 40px 5%;">
+        <div id="coinCount" class="coin-display">C:0</div>
+
+        <div class="library-header" style="margin-top: 30px;">
+            <div class="red-bar"></div>
+            TOP UP
+        </div>
+
+        <div class="pack-container">
+            <div class="pack-item">
+                <div>
+                    <h2 style="margin:0">LITTLE PACK</h2>
+                    <p style="margin:5px 0 0 0">110 Coins</p>
+                </div>
+                <button class="btn-price" onclick="addCoins(110)">P100</button>
+            </div>
+
+            <div class="pack-item">
+                <div>
+                    <h2 style="margin:0">SMALL PACK</h2>
+                    <p style="margin:5px 0 0 0">260 Coins</p>
+                </div>
+                <button class="btn-price" onclick="addCoins(260)">P250</button>
+            </div>
+
+            <div class="pack-item">
+                <div>
+                    <h2 style="margin:0">MEDIUM PACK</h2>
+                    <p style="margin:5px 0 0 0">530 Coins</p>
+                </div>
+                <button class="btn-price" onclick="addCoins(530)">P500</button>
+            </div>
+
+            <div class="pack-item">
+                <div>
+                    <h2 style="margin:0">BIG PACK</h2>
+                    <p style="margin:5px 0 0 0">1100 Coins</p>
+                </div>
+                <button class="btn-price" onclick="addCoins(1100)">P1000</button>
+            </div>
+        </div>
+    </div>
+    
+    <footer>© 2026 National Book Store Digital Shelf</footer>
+    <script src="user-script.js"></script>
+    <script>
+        function updateDisplay() {
+            document.getElementById('coinCount').innerText = `C:${getCoins()}`;
+        }
+        window.onload = updateDisplay;
+    </script>
+</body>
+</html>

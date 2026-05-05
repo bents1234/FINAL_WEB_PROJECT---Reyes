@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="user-style.css">
+    <link rel="stylesheet" href="admin-style.css">
+    <title>NBS-DS | Admin Dashboard</title>
+</head>
+<body>
+
+    <nav>
+        <div class="logo-area">
+            <img src="logo.png" alt="Logo" style="height: 40px; margin-right: 10px;">
+            <span>NBS-DS</span>
+        </div>
+        <div class="admin-title">ADMIN DASHBOARD</div>
+        <button class="btn-remove" onclick="location.href='index.html'" style="width: auto; padding: 5px 20px; font-size: 14px;">LOGOUT</button>
+    </nav>
+
+    <div class="admin-section">
+        <div class="section-header">
+            <div class="library-header"><div class="red-bar"></div>BOOK MANAGEMENT</div>
+            <button class="add-btn">+ Add New Book</button>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Book Title</th>
+                    <th>Genre</th>
+                    <th>Cash Price</th>
+                    <th>Coins Price</th>
+                    <th>Stock/Status</th>
+                    <th>Edit/Remove</th>
+                </tr>
+            </thead>
+            <tbody id="admin-book-list">
+                </tbody>
+        </table>
+    </div>
+
+    <div class="admin-section">
+        <div class="section-header">
+            <div class="library-header"><div class="red-bar"></div>ANNOUNCEMENT</div>
+            <button class="add-btn">+ Create Announcement</button>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Content</th>
+                    <th style="width: 200px;">Edit/Remove</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>📢 FLASH SALE: 20% OFF ALL E-BOOKS TODAY — FREE SHIPPING ON ORDERS OVER P1000 — NEW ARRIVALS IN CLASSICS SECTION</td>
+                    <td>
+                        <div class="action-btns">
+                            <button class="btn-edit">Edit</button>
+                            <button class="btn-remove">Remove</button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <footer>© 2026 National Book Store Digital Shelf</footer>
+
+    <script src="admin-script.js"></script>
+</body>
+</html>

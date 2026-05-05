@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="user-style.css">
+    <title>NBS-DS | Book Info</title>
+</head>
+<body>
+    <nav>
+        <div class="logo-area">
+            <img src="logo.png" alt="LOGO">
+            <span>NBS-DS</span>
+        </div>
+        <button class="btn-white" onclick="location.href='dash-library.html'" style="width: auto; padding: 10px 30px;">RETURN TO LIBRARY</button>
+    </nav>
+
+    <div style="padding: 40px 5%;">
+        <div style="display: grid; grid-template-columns: 350px 1fr; gap: 50px;">
+            <div class="img-box" id="profileImgBox" style="cursor: default; height: 500px; overflow: hidden;"></div>
+            
+            <div>
+                <h1 id="bTitle" style="font-size: 40px; margin:0; text-transform: uppercase;">BOOK NAME</h1>
+                <p id="bMeta" style="color: #ff0000; font-weight: 900; font-size: 20px;"></p>
+                <hr style="border: 1px solid #000; margin: 20px 0;">
+                
+                <div style="display: flex; flex-direction: column; gap: 15px; max-width: 400px;">
+                    <button class="btn-yellow" id="ordBtn" style="padding: 15px;">ORDER PHYSICAL COPY</button>
+                    <button class="btn-red" id="buyBtn" style="padding: 15px;">BUY EBOOK</button>
+                    <button class="btn-white" id="previewBtn" onclick="openPreview()" style="padding: 15px; background: #f9f9f9;">READ SAMPLE</button>
+                </div>
+
+                <div id="chapterArea" style="display:none; margin-top: 40px;">
+                    <h3 style="border-bottom: 4px solid #ff0000; padding-bottom: 10px; text-transform: uppercase;">Chapters</h3>
+                    <div id="chapterList" style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 20px;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="previewModal" class="modal">
+        <div class="modal-content">
+            <span class="close-preview" onclick="closePreview()">&times;</span>
+            <h2 style="text-transform: uppercase; border-bottom: 3px solid #000; padding-bottom: 10px;">Free Chapter Preview</h2>
+            <div class="chapter-content">
+                <div style="margin-bottom: 20px;">
+                    <h3>Chapter 1: Free Trial Reading</h3>
+                    <p>A cousin of Capitan Tiago, a sweet-faced old woman, who speaks Spanish quite badly, is the only one receiving the ladies.  To offer to the Spanish ladies a plate of cigars and buyos, to extend her hand to her countrywomen to be kissed, exactly as the friars do, — this is the sum of her courtesy, her policy.  The poor old lady soon became bored, and taking advantage of the noise of a plate breaking, rushed precipitately away, muttering, Jesús! Just wait, you rascals! and failed to reappear.
+
+                       The men, for their part, are making more of a stir. Some cadets in one corner are conversing in a lively manner but in low tones, looking around now and then to point out different persons in the room while they laugh more or less openly among themselves.  In contrast, two foreigners dressed in white are promenading silently from one end of the room to the other with their hands crossed behind their backs, like the bored passengers on the deck of a ship.  All the interest and the greatest animation proceed from a group composed of two priests, two civilians, and a soldier who are seated around a small table on which are seen bottles of wine and English biscuits.
+
+                       The soldier, a tall, elderly lieutenant with an austere countenance—a Duke of Alva straggling behind in the roster of the Civil Guard—talks little, but in a harsh, curt way.  One of the priests, a youthful Dominican friar, handsome, graceful, polished as the gold-mounted eyeglasses he wears, maintains a premature gravity.  He is the curate of Binondo and has been in former years a professor in the college of San Juan de Letran,[2] where he enjoyed the reputation of being a consummate dialectician, so much so that in the days when the sons of Guzman[3] still dared to match themselves in subtleties with laymen, the able disputant B. de Luna had never been able either to catch or to confuse him, the distinctions made by Fray Sibyla leaving his opponent in the situation of a fisherman who tries to catch eels with a lasso.  The Dominican says little, appearing to weigh his words.</p>
+                </div>
+                <div style="margin-bottom: 20px;">
+                    <h3>Chapter 2: Free Trial Reading</h3>
+                    <p>A cousin of Capitan Tiago, a sweet-faced old woman, who speaks Spanish quite badly, is the only one receiving the ladies.  To offer to the Spanish ladies a plate of cigars and buyos, to extend her hand to her countrywomen to be kissed, exactly as the friars do, — this is the sum of her courtesy, her policy.  The poor old lady soon became bored, and taking advantage of the noise of a plate breaking, rushed precipitately away, muttering, Jesús! Just wait, you rascals! and failed to reappear.
+
+                        The men, for their part, are making more of a stir. Some cadets in one corner are conversing in a lively manner but in low tones, looking around now and then to point out different persons in the room while they laugh more or less openly among themselves.  In contrast, two foreigners dressed in white are promenading silently from one end of the room to the other with their hands crossed behind their backs, like the bored passengers on the deck of a ship.  All the interest and the greatest animation proceed from a group composed of two priests, two civilians, and a soldier who are seated around a small table on which are seen bottles of wine and English biscuits.
+
+                       The soldier, a tall, elderly lieutenant with an austere countenance—a Duke of Alva straggling behind in the roster of the Civil Guard—talks little, but in a harsh, curt way.  One of the priests, a youthful Dominican friar, handsome, graceful, polished as the gold-mounted eyeglasses he wears, maintains a premature gravity.  He is the curate of Binondo and has been in former years a professor in the college of San Juan de Letran,[2] where he enjoyed the reputation of being a consummate dialectician, so much so that in the days when the sons of Guzman[3] still dared to match themselves in subtleties with laymen, the able disputant B. de Luna had never been able either to catch or to confuse him, the distinctions made by Fray Sibyla leaving his opponent in the situation of a fisherman who tries to catch eels with a lasso.  The Dominican says little, appearing to weigh his words.</p>
+                </div>
+                <div class="locked-chapter"><h3>🔒 Chapter 3 - Locked</h3></div>
+                <div class="locked-chapter"><h3>🔒 Chapter 4 - Locked</h3></div>
+                <div class="locked-chapter"><h3>🔒 Chapter 5 - Locked</h3></div>
+                <div class="locked-chapter"><h3>🔒 Chapter 6 - Locked</h3></div>
+                <div class="locked-chapter"><h3>🔒 Chapter 7 - Locked</h3></div>
+                <div class="locked-chapter"><h3>🔒 Chapter 8 - Locked</h3></div>
+                <div class="locked-chapter"><h3>🔒 Chapter 9 - Locked</h3></div>
+                <div class="locked-chapter"><h3>🔒 Chapter 10 - Locked</h3></div>
+            </div>
+        </div>
+    </div>
+
+    <footer>© 2026 National Book Store Digital Shelf</footer>
+
+    <script src="user-script.js"></script>
+    <script>
+        const id = parseInt(new URLSearchParams(window.location.search).get('id'));
+        const book = books.find(b => b.id === id);
+        
+        if(book) {
+            // INJECT IMAGE
+            document.getElementById('profileImgBox').innerHTML = `<img src="${book.image}" style="width:100%; height:100%; object-fit:cover;" onerror="this.parentElement.innerText='IMAGE NOT FOUND'">`;
+            
+            document.getElementById('bTitle').innerText = book.name;
+            document.getElementById('bMeta').innerText = `${book.genre} | Published: ${book.date}`;
+            document.getElementById('ordBtn').onclick = () => orderPhysical(book.id);
+            
+            const owned = getOwned();
+            if(owned.includes(book.id)) {
+                document.getElementById('buyBtn').style.display = 'none';
+                document.getElementById('previewBtn').style.display = 'none';
+                document.getElementById('chapterArea').style.display = 'block';
+                
+                const list = document.getElementById('chapterList');
+                
+                for(let i=1; i<=10; i++) {
+                    let targetPage;
+                    if (i === 1) targetPage = 'dash-reader1.html';
+                    else if (i === 2) targetPage = 'dash-reader2.html';
+                    else targetPage = 'dash-reader.html';
+
+                    list.innerHTML += `<button class="btn-white" style="background:#eeeeee;" onclick="location.href='${targetPage}?id=${id}&ch=${i}'">CHAPTER ${i}</button>`;
+                }
+            } else {
+                document.getElementById('buyBtn').onclick = () => buyBook(book.id, book.price);
+            }
+        }
+
+        function openPreview() { document.getElementById('previewModal').style.display = 'block'; }
+        function closePreview() { document.getElementById('previewModal').style.display = 'none'; }
+    </script>
+</body>
+</html>
